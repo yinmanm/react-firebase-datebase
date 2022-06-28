@@ -1,0 +1,178 @@
+
+:root {
+  --color-1: #242526;
+  --color-2: white;
+  --color-3: #0084ff;
+  --color-4: grey;
+  --color-5: #eb4034;
+  --color-6: #333;
+}
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0px 20px;
+}
+nav a {
+  text-decoration: none;
+}
+nav div a {
+  margin-right: 20px;
+}
+
+.selected_user {
+  background: #eee;
+}
+
+.user_wrapper {
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.message_form {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 10px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.message_form input {
+  width: 40vw;
+  margin: 0px 10px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+.messages {
+  height: calc(100vh - 210px);
+  padding-bottom: 10px;
+  overflow-y: auto;
+}
+.messages_user {
+  text-align: center;
+  border-bottom: 2px solid #eee;
+}
+.message_wrapper {
+  margin-top: 5px;
+  padding: 0px 5px;
+}
+.message_wrapper img {
+  width: 100%;
+  border-radius: 5px;
+}
+.message_wrapper p {
+  padding: 10px;
+  display: inline-block;
+  max-width: 50%;
+  text-align: left;
+  border-radius: 5px;
+}
+.message_wrapper small {
+  display: inline-block;
+  margin-top: 15px;
+  opacity: 0.8;
+}
+.message_wrapper.own {
+  text-align: right;
+}
+.message_wrapper .me {
+  background: var(--color-3);
+  color: white;
+}
+.message_wrapper .friend {
+  background: white;
+}
+
+.user_status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.user_status.offline {
+  background: var(--color-5);
+}
+.user_status.online {
+  background: #34eb52;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.no-scroll-bar::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.profile_card {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  box-shadow: 1px 2px 10px #eee;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.profile_container {
+  display: flex;
+  align-items: center;
+}
+.profile_container .img_container {
+  position: relative;
+  margin-right: 20px;
+}
+.img_container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out all;
+}
+.profile_container .overlay {
+  color: white;
+  transition: 0.5s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+input[type="file" i] {
+  appearance: none;
+  background-color: initial;
+  cursor: default;
+  align-items: baseline;
+  color: inherit;
+  text-overflow: ellipsis;
+  white-space: pre;
+  text-align: start !important;
+  padding: initial;
+  border: initial;
+  overflow: hidden !important;
+}
+.profile_container .text_container {
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .message_wrapper p {
+    max-width: 75%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .message_form input {
+    flex: 1;
+    width: auto;
+    margin: 0px 10px;
+  }
+  .message_wrapper p {
+    max-width: 100%;
+  }
+}
